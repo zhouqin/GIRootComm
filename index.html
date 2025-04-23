@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Project</title>
+    <style>
+        :root {
+            --gh-dark: #24292f;
+            --gh-blue: #0969da;
+            --gh-light: #f6f8fa;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--gh-dark);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--gh-light);
+        }
+        header {
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--gh-blue);
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: var(--gh-dark);
+            color: white;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        .section {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--gh-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        .btn-gh {
+            background: var(--gh-dark);
+        }
+        pre {
+            background: var(--gh-dark);
+            color: white;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #57606a;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project Name</h1>
+        <span class="badge">v1.0.0</span>
+        <span class="badge">MIT License</span>
+    </header>
+
+    <div class="section">
+        <h2>🚀 About</h2>
+        <p>A brief description of your project. Explain what it does and why it's useful.</p>
+    </div>
+
+    <div class="section">
+        <h2>✨ Features</h2>
+        <ul>
+            <li>Core feature 1</li>
+            <li>Core feature 2</li>
+            <li>Core feature 3</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📦 Installation</h2>
+        <p>How to install your project:</p>
+        <pre><code>npm install your-package</code></pre>
+        <p>Or using yarn:</p>
+        <pre><code>yarn add your-package</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>🔧 Usage</h2>
+        <p>Basic usage example:</p>
+        <pre><code>import yourModule from 'your-package';
+yourModule.doSomething();</code></pre>
+    </div>
+
+    <div class="section" style="text-align: center;">
+        <a href="https://github.com/your-username/your-repo" class="btn-gh">View on GitHub</a>
+        <a href="https://github.com/your-username/your-repo/releases" class="btn">Download</a>
+        <a href="https://your-project-demo-url.com" class="btn">Live Demo</a>
+    </div>
+
+    <footer>
+        <p>© 2023 Your Name | Made with ❤️ for developers</p>
+    </footer>
+</body>
+</html>
