@@ -27,6 +27,12 @@
             text-align: left;
             margin-bottom: 20px;
         }
+        h3 {
+            color: var(--gh-dark);
+            text-align: left;
+            margin-bottom: 0px;
+            margin-top: 20px;
+        }
 
         .projects-container {
             display: flex;
@@ -60,11 +66,20 @@
             transition: transform 0.3s; /* 悬停动画 */
         }
 
-        .project-logo {
-            width: 60px;
-            height: 60px;
+        .project-logo-s3m {
+            width: 80px;
+            height: 80px;
             object-fit: contain;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
+            background: #ffffff;
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .project-logo-yukon {
+            width: 100px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 0px;
             background: #ffffff;
             padding: 0px;
             border-radius: 8px;
@@ -129,32 +144,37 @@
 
     <div class="section">
         <h2>关于空间智能根社区</h2>
-        <p>空间智能根社区是xxxx.</p>
+        <p>空间智能根社区，专注于开源GIS技术推广与协作的创新平台，致力于聚合地理空间领域的开发者、科研机构与企业，
+            通过共享开源工具、实战案例与行业解决方案，推动空间智能技术的自主创新与生态共建,
+            共同打造中国本土的“空间智能技术基座”。<br>
+            <br>
+            加入我们，共同探索开源GIS的无限可能！<br>
+        </p>
     </div>
 
     <h2>开源项目</h2>    
     <div class="projects-container">
         <!-- 第一栏 -->
         <div class="project-column">
-            <img src="./asset/s3m.png" alt="S3M Logo" class="project-logo">
+            <img src="./asset/s3m.png" alt="S3M Logo" class="project-logo-s3m">
             <!-- <h3 class="project-title">S3M</h3> -->
             <p class="project-description">
                 S3M (Spatial 3D Model)是一种开放式、可扩展的空间三维数据格式，旨为海量多源异构三维地理空间数据在不同终端之间的传输、交换与共享提供数据格式的具体规范。
             </p>
-            <a href="https://github.com/SuperMap/s3m-spec" class="github-link">GitHub仓库</a>
-            <h3 class="project-title">支持的厂商</h3>
+            <a href="https://github.com/SuperMap/s3m-spec" class="btn">GitHub仓库</a>
+            <h3>支持的厂商</h3>
             <img src="./asset/yukon_supported.jpg" alt="S3M Logo" class="project-image">
         </div>
         
         <!-- 第二栏 -->
         <div class="project-column">
-            <img src="./asset/Yukon.png" alt="Yukon Logo" class="project-logo">           
+            <img src="./asset/Yukon.png" alt="Yukon Logo" class="project-logo-yukon">           
             <!--  <h3 class="project-title">Yukon</h3> -->
             <p class="project-description">
                 Yukon（禹贡），基于openGauss数据库扩展地理空间数据的存储和管理能力，并提供专业的GIS（Geographic Information System）功能，赋能传统关系型数据库。
             </p>
-            <a href="https://gitee.com/opengauss/Yukon" class="github-link">Gitee仓库</a>
-            <h3 class="project-title">支持的厂商</h3>
+            <a href="https://gitee.com/opengauss/Yukon" class="btn">Gitee仓库</a>
+            <h3>支持的厂商</h3>
             <img src="./asset/yukon_supported.jpg" alt="S3M Logo" class="project-image">
         </div>
     </div>
