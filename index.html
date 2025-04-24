@@ -1,47 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空间智能根社区</title>
+    <title>GI 根社区</title>
     <style>
         :root {
             --gh-dark: #24292f;
             --gh-blue: #0969da;
-            --gh-light: #f6f8fa;
+            --gh-border: #e1e4e8;
         }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             line-height: 1.6;
-            color: var(--gh-dark);
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: var(--gh-light);
         }
         header {
             border-bottom: 1px solid #e1e4e8;
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
-        h1 {
-            color: var(--gh-blue);
-        }
-        .badge {
-            display: inline-block;
-            padding: 3px 8px;
-            background: var(--gh-dark);
-            color: white;
-            border-radius: 3px;
-            font-size: 14px;
-            margin-right: 8px;
-        }
-        .section {
-            background: white;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 20px;
+        h2 {
+            color: var(--gh-dark);
+            text-align: left;
             margin-bottom: 20px;
+        }
+
+        .projects-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-column {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border: 1px solid var(--gh-border);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 图片容器样式 */
+        .project-image-container {
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden; /* 确保图片圆角不溢出 */
+            border: 1px solid var(--gh-border);
+        }
+
+        /* 图片自适应样式 */
+        .project-image {
+            width: 100%;      /* 撑满容器宽度 */
+            height: auto;     /* 高度自适应 */
+            display: block;   /* 消除图片底部间隙 */
+            transition: transform 0.3s; /* 悬停动画 */
+        }
+
+        .project-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            background: #ffffff;
+            padding: 0px;
+            border-radius: 8px;
+        }
+        .project-title {
+            color: var(--gh-dark);
+            margin: 10px 0;
+        }
+        .project-title-link {
+            text-decoration: none; /* 去除下划线 */
+            color: inherit; /* 继承父元素颜色 */
+        }
+
+        .project-title-link:hover .project-title {
+            color: var(--gh-blue); /* 悬停时变为GitHub蓝色 */
+            text-decoration: underline; /* 可选：悬停时显示下划线 */
+        }
+        .project-description {
+            color: #57606a;
+            margin-bottom: 20px;
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: left;
         }
         .btn {
             display: inline-block;
@@ -56,65 +106,111 @@
         .btn-gh {
             background: var(--gh-dark);
         }
-        pre {
+        .github-link {
+            display: inline-block;
+            padding: 8px 16px;
             background: var(--gh-dark);
             color: white;
-            padding: 16px;
+            text-decoration: none;
             border-radius: 6px;
-            overflow-x: auto;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #57606a;
             font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .project-column {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>空间智能根社区</h1>
-        <span class="badge">v1.0.0</span>
-        <span class="badge">MIT License</span>
     </header>
 
     <div class="section">
-        <h2>🚀 About</h2>
-        <p>A brief description of your project. Explain what it does and why it's useful.</p>
+        <h2>关于空间智能根社区</h2>
+        <p>空间智能根社区是xxxx.</p>
     </div>
 
-    <div class="section">
-        <h2>✨ Features</h2>
-        <ul>
-            <li>Core feature 1</li>
-            <li>Core feature 2</li>
-            <li>Core feature 3</li>
-        </ul>
+    <h2>开源项目</h2>    
+    <div class="projects-container">
+        <!-- 第一栏 -->
+        <div class="project-column">
+            <img src="./asset/s3m.png" alt="S3M Logo" class="project-logo">
+            <!-- <h3 class="project-title">S3M</h3> -->
+            <p class="project-description">
+                S3M (Spatial 3D Model)是一种开放式、可扩展的空间三维数据格式，旨为海量多源异构三维地理空间数据在不同终端之间的传输、交换与共享提供数据格式的具体规范。
+            </p>
+            <a href="https://github.com/SuperMap/s3m-spec" class="github-link">GitHub仓库</a>
+            <h3 class="project-title">支持的厂商</h3>
+            <img src="./asset/yukon_supported.jpg" alt="S3M Logo" class="project-image">
+        </div>
+        
+        <!-- 第二栏 -->
+        <div class="project-column">
+            <img src="./asset/Yukon.png" alt="Yukon Logo" class="project-logo">           
+            <!--  <h3 class="project-title">Yukon</h3> -->
+            <p class="project-description">
+                Yukon（禹贡），基于openGauss数据库扩展地理空间数据的存储和管理能力，并提供专业的GIS（Geographic Information System）功能，赋能传统关系型数据库。
+            </p>
+            <a href="https://gitee.com/opengauss/Yukon" class="github-link">Gitee仓库</a>
+            <h3 class="project-title">支持的厂商</h3>
+            <img src="./asset/yukon_supported.jpg" alt="S3M Logo" class="project-image">
+        </div>
+    </div>
+    <h2>加入空间智能根社区</h2>   
+    <div class="project-card">
+    <a href="xxx" class="btn">微信公众号</a>
+    <a href="xxx" class="btn">Email</a>
     </div>
 
-    <div class="section">
-        <h2>📦 Installation</h2>
-        <p>How to install your project:</p>
-        <pre><code>npm install your-package</code></pre>
-        <p>Or using yarn:</p>
-        <pre><code>yarn add your-package</code></pre>
+    <h2>新闻动态</h2>   
+    <div class="project-card">
+        <a href="https://blog.csdn.net/lg8883573/article/details/140153482?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522bbbafb7d13b4fa1c6cc565c75de559f5%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=bbbafb7d13b4fa1c6cc565c75de559f5&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-140153482-null-null.142^v102^control&utm_term=supermap%20s3m" class="project-title-link">
+            <h3 class="project-title">xxx</h3>
+        </a>
     </div>
+    
+    <h2>知识社区</h2>    
+    <!-- <div class="projects-container">    -->    
+        <div class="project-card">            
+            <a href="https://blog.csdn.net/lg8883573/article/details/140153482?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522bbbafb7d13b4fa1c6cc565c75de559f5%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=bbbafb7d13b4fa1c6cc565c75de559f5&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-140153482-null-null.142^v102^control&utm_term=supermap%20s3m" class="project-title-link">
+                <h3 class="project-title">Cesium----加载SuperMap的S3M地形</h3>
+            </a>
+            <p class="project-description">
+                在原生Cesium中加载S3M地形。
+            </p>
+        </div>
 
-    <div class="section">
-        <h2>🔧 Usage</h2>
-        <p>Basic usage example:</p>
-        <pre><code>import yourModule from 'your-package';
-yourModule.doSomething();</code></pre>
+        <div class="project-card">            
+            <a href="https://blog.csdn.net/qq_41134073/article/details/126833847?ops_request_misc=%257B%2522request%255Fid%2522%253A%25226488ee1badec391c38ac4f7a9d7bcc80%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=6488ee1badec391c38ac4f7a9d7bcc80&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-126833847-null-null.142^v102^control&utm_term=supermap%20yukon" class="project-title-link">
+                <h3 class="project-title">SuperMap 禹贡（YuKon）数据库</h3>
+            </a>
+            <p class="project-description">
+                Yukon介绍及安装。
+            </p>
+        </div>
+        <div class="project-card">            
+            <a href="https://blog.csdn.net/supermapsupport/article/details/142632129?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d593e12d7db203e4889341c9e3f5a1c2%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=d593e12d7db203e4889341c9e3f5a1c2&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-2-142632129-null-null.142^v102^control&utm_term=supermap%20yukon&spm=1018.2226.3001.4187" class="project-title-link">
+                <h3 class="project-title">华为GaussDB数据库之Yukon安装与使用</h3>
+            </a>
+            <p class="project-description">
+                基于华为GaussDB安装Yukon。
+            </p>
+        </div>
+        <div class="project-card">            
+            <a href="https://blog.csdn.net/weixin_49045960/article/details/125601094?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d593e12d7db203e4889341c9e3f5a1c2%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=d593e12d7db203e4889341c9e3f5a1c2&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-3-125601094-null-null.142^v102^control&utm_term=supermap%20yukon" class="project-title-link">
+                <h3 class="project-title">docker安装Yukon禹贡步骤</h3>
+            </a>
+            <p class="project-description">
+                docker安装Yukon禹贡步骤。
+            </p>
+        </div>
+        
+    <!-- </div>  -->    
+    <h2>SuperMap Information （是否需要？）</h2>    
+    <div class="project-card">            
+        <h3 class="project-title">关于SuperMap & copyright 信息（参考官网）</h3>
     </div>
-
-    <div class="section" style="text-align: center;">
-        <a href="https://github.com/your-username/your-repo" class="btn-gh">View on GitHub</a>
-        <a href="https://github.com/your-username/your-repo/releases" class="btn">Download</a>
-        <a href="https://your-project-demo-url.com" class="btn">Live Demo</a>
-    </div>
-
-    <footer>
-        <p>© 2023 Your Name | Made with ❤️ for developers</p>
-    </footer>
 </body>
 </html>
